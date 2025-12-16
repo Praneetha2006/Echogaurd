@@ -24,27 +24,4 @@ React architecture with proper state management.
 ```bash
 npm install
 npm start
-
----
-
-### STEP 4: Save the file
-Press **Ctrl + S**
-
----
-
-## ❗ VERY IMPORTANT RULE
-After this step:
-- ❌ Do NOT paste any other README code
-- ❌ Do NOT keep CRA or Vite text
-- ❌ Do NOT keep `<<<<<<< HEAD`
-
----
-
-## ✅ THEN do the Git commands (separately)
-
-After saving, in terminal run:
-
-```bash
-git add README.md
-git commit -m "Clean README and remove merge conflict markers"
-git push
+```
