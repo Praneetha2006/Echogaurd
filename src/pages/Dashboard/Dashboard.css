@@ -1,0 +1,160 @@
+/* ================= GLOBAL RESET ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  background: #000;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* ================= DASHBOARD BACKGROUND ================= */
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a0000 0%, #000000 70%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 120px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.dashboard-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(8, 8, 8, 0.92);
+  border-radius: 18px;
+  padding: 35px 50px 45px;
+  text-align: center;
+
+  box-shadow:
+    0 0 70px rgba(255, 0, 0, 0.45),
+    inset 0 0 12px rgba(255, 0, 0, 0.12);
+
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+/* ================= TOP STATUS ================= */
+.top-status {
+  color: #cccccc;
+  font-size: 18px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= CURRENT LISTENING TEXT BOX ================= */
+.listening-box {
+  border: 1px solid #ff4c40;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 25px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================= MICROPHONE ================= */
+.mic-wrapper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mic-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ff4c40 0%, #a50000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.mic-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.mic-wrapper svg {
+  color: #1a1a1a;
+}
+
+/* ================= MIC PULSE ================= */
+.mic-wrapper.active {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(255, 0, 0, 0.7),
+      0 0 0 10px rgba(255, 0, 0, 0.2);
+  }
+  70% {
+    box-shadow:
+      0 0 0 18px rgba(255, 0, 0, 0.2),
+      0 0 0 40px rgba(255, 0, 0, 0.05);
+  }
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(255, 0, 0, 0),
+      0 0 0 10px rgba(255, 0, 0, 0);
+  }
+}
+
+/* ================= PREVIOUS TRANSCRIPTS ================= */
+.previous-transcripts {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 18px 22px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid rgba(255, 0, 0, 0.25);
+}
+
+.previous-transcripts h4 {
+  margin: 0 0 12px 0;
+  color: #ff4c40;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.previous-transcripts p {
+  color: #888;
+  font-size: 14px;
+}
+
+.previous-transcripts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.previous-transcripts li {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 6px;
+}
