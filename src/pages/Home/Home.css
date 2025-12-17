@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  background: rgb(12, 1, 28);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+}
+
+.content h1 {
+    height:150px;
+  font-size: 3rem;
+  color: white;
+  letter-spacing: 3px;
+  animation: floatText 4s ease-in-out infinite;
+}
+
+.content p {
+  margin-top: 30px;
+  opacity: 0.8;
+}
+
+.content button {
+  margin-top: 50px;
+  padding: 12px 32px;
+  border: 2px solid #A91D3A;
+  background: transparent;
+  color: #A91D3A;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.content button:hover {
+  background: #A91D3A;
+  color: black;
+}
+
+/* Floating text animation */
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* WATER WAVES */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(238, 46, 84, 0.35),
+    transparent 70%
+  );
+  animation: waterMove 20s linear infinite;
+}
+
+/* Different layers for depth */
+.wave1 {
+  animation-duration: 22s;
+}
+
+.wave2 {
+  animation-duration: 30s;
+  opacity: 0.6;
+}
+
+.wave3 {
+  animation-duration: 38s;
+  opacity: 0.4;
+}
+
+/* Floating water motion */
+@keyframes waterMove {
+  from {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+.join-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #A91D3A;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px 4px;
+  letter-spacing: 1px;
+}
+
+/* Highlight line */
+.join-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #A91D3A;
+  transition: width 0.4s ease;
+}
+
+/* Hover animation */
+.join-btn:hover::after {
+  width: 100%;
+}

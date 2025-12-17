@@ -1,15 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import History from "./pages/History/History";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Home from "./pages/Home/Home";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    return <Home/>
 }
-
 export default App;
